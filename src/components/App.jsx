@@ -1,15 +1,9 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { Statistics } from './Statistics/Statistics';
 import { FeedbackOption } from './FeedbackOption/FeedbackOption';
 import { Section } from './Section/Section';
 import { Notification } from './Notification/Notification';
 
-// export class App extends Component {
-//   state = {
-//     good: 0,
-//     neutral: 0,
-//     bad: 0,
-//   };
 export const App = () => {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
@@ -23,7 +17,6 @@ export const App = () => {
   const countPositiveFeedbackPercentage = () => {
     const total = good + neutral + bad;
     const positive = Math.round((good / total) * 100);
-    // console.log(positivePercentage)
     return isNaN(positive) ? 0 : positive;
   };
 
